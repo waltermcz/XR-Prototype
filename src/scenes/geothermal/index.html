@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Geothermal AR</title>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene
+      mindar-image="imageTargetSrc: /markers/geothermal.mind; autoStart: true;"
+      color-space="sRGB"
+      renderer="colorManagement: true"
+      vr-mode-ui="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+    >
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity mindar-image-target="targetIndex: 0">
+        <!-- This box is your placeholder. It will float above your marker. -->
+        <a-box
+          position="0 0 0.1"
+          rotation="0 0 0"
+          width="0.5"
+          height="0.5"
+          depth="0.5"
+          color="#4CAF50"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 3000"
+        ></a-box>
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
+```
+
+Right now this will render a spinning green box above your marker. That's intentional — you want to confirm tracking is working before you invest in real 3D content.
+
+---
+
+**Step 6: Create a Placeholder Marker**
+
+You need a `.mind` file in `public/markers/` before the scene will work. For right now, grab any image with good contrast — a photo, a complex illustration, anything. Go to:
+```
+https://hiukim.github.io/mind-ar-js-doc/tools/compile

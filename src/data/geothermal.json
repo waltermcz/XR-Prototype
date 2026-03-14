@@ -1,0 +1,63 @@
+{
+  "site": "Campus Geothermal System",
+  "updated": "2024-09-01",
+  "units": {
+    "temperature": "°C",
+    "flowRate": "L/min",
+    "power": "kW",
+    "cop": "dimensionless"
+  },
+  "locations": [
+    {
+      "id": "heatpump-north",
+      "label": "North Building Heat Pump",
+      "room": "ENG-101",
+      "markerIndex": 0,
+      "flow": {
+        "inputTempC": 12,
+        "outputTempC": 45,
+        "flowRateLPM": 8.4
+      },
+      "power": {
+        "thermalOutputKW": 18.2,
+        "electricInputKW": 4.6,
+        "cop": 3.96
+      },
+      "status": "active"
+    },
+    {
+      "id": "heatpump-south",
+      "label": "South Building Heat Pump",
+      "room": "SCI-204",
+      "markerIndex": 1,
+      "flow": {
+        "inputTempC": 11,
+        "outputTempC": 42,
+        "flowRateLPM": 6.1
+      },
+      "power": {
+        "thermalOutputKW": 14.5,
+        "electricInputKW": 3.8,
+        "cop": 3.82
+      },
+      "status": "active"
+    },
+    {
+      "id": "groundloop-main",
+      "label": "Main Ground Loop Exchange",
+      "room": "Mechanical Basement B1",
+      "markerIndex": 2,
+      "flow": {
+        "inputTempC": 8,
+        "outputTempC": 13,
+        "flowRateLPM": 22.0
+      },
+      "power": {
+        "thermalOutputKW": 7.7,
+        "electricInputKW": 1.2,
+        "cop": 6.41
+      },
+      "status": "active"
+    }
+  ]
+}
